@@ -6,13 +6,13 @@ const Hero = () => {
       <div className="container mx-auto px-6 child-delay pt-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <motion.div 
-            className="lg:w-1/2 text-[#6A0DAD] dark:text-white relative z-10"
+            className="lg:w-1/2 text-white relative z-10"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="relative inline-block">
-              <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-white/10 dark:text-white/95 text-[#6A0DAD] rounded-full royal-card backdrop-blur-md mb-6 border border-[#FFD700]/20">
+              <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-black/30 text-white rounded-full royal-card backdrop-blur-md mb-6 border border-[#FFD700]/20">
                 Software Engineer & Full-Stack Developer
               </span>
               <motion.span 
@@ -36,7 +36,7 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl dark:text-white/80 text-[#6A0DAD]/80 font-['Cormorant_Garamond'] mb-10 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-white/80 font-['Cormorant_Garamond'] mb-10 max-w-xl leading-relaxed">
               I create sophisticated digital experiences with a royal touch. Specializing in
               full-stack development with a focus on performant, artistic interfaces and
               elegant architecture.
@@ -54,7 +54,7 @@ const Hero = () => {
               
               <motion.a 
                 href="#contact" 
-                className="px-8 py-4 bg-transparent border border-[#FFD700] dark:text-white text-[#6A0DAD] rounded-lg font-medium hover:bg-[#FFD700]/10 transition-all duration-300 font-['Cinzel']"
+                className="px-8 py-4 bg-transparent border border-[#FFD700] text-white rounded-lg font-medium hover:bg-[#FFD700]/10 transition-all duration-300 font-['Cinzel']"
                 whileHover={{ 
                   backgroundColor: "rgba(255, 215, 0, 0.1)",
                   borderColor: "rgba(255, 215, 0, 0.8)"
@@ -74,10 +74,10 @@ const Hero = () => {
           >
             <div className="relative mx-auto">
               {/* Decorative hexagon */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#6A0DAD]/40 to-[#FFD700]/20 rounded-full blur-md z-0"></div>
+              <div className="absolute -inset-4 bg-gradient-to-tr from-black/40 to-[#FFD700]/20 rounded-full blur-md z-0"></div>
               
-              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 gold-border shadow-[0_0_30px_rgba(106,13,173,0.3)] mx-auto relative z-10">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#6A0DAD] to-[#4A0080] opacity-10"></div>
+              <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 gold-border shadow-[0_0_30px_rgba(255,215,0,0.3)] mx-auto relative z-10">
+                <div className="absolute inset-0 bg-gradient-to-tr from-black to-[#111111] opacity-10"></div>
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                   alt="Software Engineer Portrait" 
@@ -138,7 +138,7 @@ const Hero = () => {
         </div>
         
         {/* Stats with royal styling */}
-        <div className="flex flex-wrap justify-center md:justify-start gap-x-16 gap-y-8 mt-24 text-[#6A0DAD] dark:text-white/80">
+        <div className="flex flex-wrap justify-center md:justify-start gap-x-16 gap-y-8 mt-24 text-white/80">
           {[
             { number: "5+", label: "Years Experience" },
             { number: "50+", label: "Projects Completed" },
@@ -163,7 +163,7 @@ const Hero = () => {
                 }}
               />
               <p className="text-4xl font-bold gold-accent font-['Cinzel']">{stat.number}</p>
-              <p className="text-sm mt-1 dark:text-white/70 text-[#6A0DAD]/80 font-['Cormorant_Garamond']">{stat.label}</p>
+              <p className="text-sm mt-1 text-white/70 font-['Cormorant_Garamond']">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -175,7 +175,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <p className="text-[#6A0DAD] dark:text-white/70 mb-2 font-['Cinzel'] text-sm">Scroll Down</p>
+          <p className="text-white/70 mb-2 font-['Cinzel'] text-sm">Scroll Down</p>
           <motion.div 
             className="w-1 h-8 rounded-full border border-[#FFD700] relative overflow-hidden"
             animate={{

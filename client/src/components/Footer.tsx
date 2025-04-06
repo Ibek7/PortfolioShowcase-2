@@ -57,8 +57,8 @@ const Footer = () => {
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
-        <div className="absolute right-10 top-1/2 w-40 h-40 rounded-full bg-[#6A0DAD] blur-[100px] transform -translate-y-1/2"></div>
-        <div className="absolute left-10 bottom-1/3 w-40 h-40 rounded-full bg-[#800020] blur-[100px]"></div>
+        <div className="absolute right-10 top-1/2 w-40 h-40 rounded-full bg-[#FFD700] blur-[100px] opacity-30 transform -translate-y-1/2"></div>
+        <div className="absolute left-10 bottom-1/3 w-40 h-40 rounded-full bg-[#FFD700] blur-[100px] opacity-20"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">

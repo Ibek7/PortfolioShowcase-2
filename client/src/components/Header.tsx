@@ -56,7 +56,7 @@ const Header = ({ activeSection }: HeaderProps) => {
           transition={{ duration: 0.6 }}
         >
           <span className="gold-accent font-['Cinzel'] text-3xl">R</span>
-          <span className="text-[#6A0DAD] dark:text-white font-['Cinzel']">oyal</span>
+          <span className="text-white font-['Cinzel']">oyal</span>
           <span className="gold-accent font-['Cinzel'] text-2xl">Dev</span>
           <div className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
         </motion.a>
@@ -71,7 +71,7 @@ const Header = ({ activeSection }: HeaderProps) => {
                 e.preventDefault();
                 scrollToSection(link.id);
               }}
-              className={`nav-link text-[#6A0DAD] dark:text-white font-medium hover:text-[#FFD700] transition-colors ${activeSection === link.id ? 'active text-[#FFD700]' : ''}`}
+              className={`nav-link text-white font-medium hover:text-[#FFD700] transition-colors ${activeSection === link.id ? 'active text-[#FFD700]' : ''}`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 + index * 0.1 }}
@@ -83,7 +83,7 @@ const Header = ({ activeSection }: HeaderProps) => {
         
         {/* Mobile Menu Button */}
         <motion.button 
-          className="md:hidden text-[#6A0DAD] dark:text-white focus:outline-none"
+          className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
           initial={{ opacity: 0 }}
@@ -125,7 +125,7 @@ const Header = ({ activeSection }: HeaderProps) => {
                     e.preventDefault();
                     scrollToSection(link.id);
                   }}
-                  className={`text-[#6A0DAD] dark:text-white font-medium py-2 hover:text-[#FFD700] transition-colors ${activeSection === link.id ? 'text-[#FFD700]' : ''}`}
+                  className={`text-white font-medium py-2 hover:text-[#FFD700] transition-colors ${activeSection === link.id ? 'text-[#FFD700]' : ''}`}
                 >
                   {link.label}
                 </a>
