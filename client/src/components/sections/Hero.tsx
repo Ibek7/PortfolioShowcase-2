@@ -24,7 +24,7 @@ const Hero = () => {
           >
             <div className="relative inline-block">
               <span className="inline-block px-4 py-1.5 text-sm font-semibold bg-black/30 text-white rounded-full royal-card backdrop-blur-md mb-6 border border-[#FFD700]/20">
-                Software Engineer & Full-Stack Developer
+                Computer Science & Mathematics Student
               </span>
               <motion.span 
                 className="absolute -right-2 -top-2 w-4 h-4 rounded-full bg-[#FFD700]"
@@ -41,16 +41,16 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Cinzel'] font-bold leading-tight mb-8">
-              <span className="block">Crafting Digital</span>
+              <span className="block">Bekam</span>
               <span className="block mt-1">
-                <span className="gold-accent-glow" data-text="Elegance">Elegance</span> with <span className="gold-accent">Code</span>
+                <span className="gold-accent-glow" data-text="Guta">Guta</span>
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-white/80 font-['Cormorant_Garamond'] mb-10 max-w-xl leading-relaxed">
-              I create sophisticated digital experiences with a royal touch. Specializing in
-              full-stack development with a focus on performant, artistic interfaces and
-              elegant architecture.
+              First-year Computer Science and Mathematics double major at DePauw University with 
+              a passion for AI research, web development, and tutoring. Maintaining a 3.97 GPA while exploring how
+              technology can address complex social challenges.
             </p>
             
             <div className="flex flex-wrap gap-5">
@@ -91,8 +91,8 @@ const Hero = () => {
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 gold-border shadow-[0_0_30px_rgba(255,215,0,0.3)] mx-auto relative z-10">
                 <div className="absolute inset-0 bg-gradient-to-tr from-black to-[#111111] opacity-10"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                  alt="Software Engineer Portrait" 
+                  src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  alt="Bekam Guta" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -152,10 +152,10 @@ const Hero = () => {
         {/* Stats with royal styling */}
         <div className="flex flex-wrap justify-center md:justify-start gap-x-16 gap-y-8 mt-24 text-white/80">
           {[
-            { number: "5+", label: "Years Experience" },
-            { number: "50+", label: "Projects Completed" },
-            { number: "20+", label: "Happy Clients" },
-            { number: "1000+", label: "GitHub Contributions" }
+            { number: "3.97", label: "Cumulative GPA" },
+            { number: "4.00", label: "Major GPA" },
+            { number: "82%", label: "AI Research Accuracy" },
+            { number: "2", label: "Academic Honor Awards" }
           ].map((stat, index) => (
             <motion.div 
               key={index}

@@ -1,110 +1,111 @@
 // Projects section data
 export const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A modern e-commerce solution with real-time inventory management and payment processing.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    category: "Full-Stack",
+    title: "Software Engineer Portfolio",
+    description: "Ultra-luxurious personal portfolio built with React, TypeScript, and Framer Motion, featuring particle animations and a strict gold-black-white color scheme.",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    category: "Frontend",
     technologies: [
       { name: "React", bgColor: "bg-blue-100", textColor: "text-blue-800" },
-      { name: "Node.js", bgColor: "bg-green-100", textColor: "text-green-800" },
-      { name: "MongoDB", bgColor: "bg-purple-100", textColor: "text-purple-800" },
-      { name: "Stripe API", bgColor: "bg-yellow-100", textColor: "text-yellow-800" }
+      { name: "TypeScript", bgColor: "bg-purple-100", textColor: "text-purple-800" },
+      { name: "Framer Motion", bgColor: "bg-blue-100", textColor: "text-blue-800" },
+      { name: "Particles.js", bgColor: "bg-green-100", textColor: "text-green-800" }
     ],
     caseStudyUrl: "#",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
+    githubUrl: "https://github.com/Ibek7",
+    liveUrl: "#"
   },
   {
-    title: "Project Management Tool",
-    description: "Streamlined task management app with drag-and-drop interfaces and real-time collaboration.",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-    category: "Front-End",
+    title: "Human Trafficking Analysis Tool",
+    description: "Research project using machine learning and NLP techniques to identify patterns in human trafficking cases in East Africa, with 82% model accuracy.",
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80",
+    category: "AI Research",
     technologies: [
-      { name: "Vue.js", bgColor: "bg-blue-100", textColor: "text-blue-800" },
-      { name: "Vuex", bgColor: "bg-teal-100", textColor: "text-teal-800" },
-      { name: "Firebase", bgColor: "bg-pink-100", textColor: "text-pink-800" },
-      { name: "Tailwind CSS", bgColor: "bg-orange-100", textColor: "text-orange-800" }
+      { name: "Python", bgColor: "bg-blue-100", textColor: "text-blue-800" },
+      { name: "ML", bgColor: "bg-yellow-100", textColor: "text-yellow-800" },
+      { name: "NLP", bgColor: "bg-green-100", textColor: "text-green-800" },
+      { name: "Data Analysis", bgColor: "bg-pink-100", textColor: "text-pink-800" }
     ],
     caseStudyUrl: "#",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
+    githubUrl: "https://github.com/Ibek7",
+    liveUrl: "#"
   },
   {
-    title: "Financial Dashboard",
-    description: "Interactive data visualization platform for financial analytics with customizable reports.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80",
-    category: "Data Visualization",
+    title: "Programming Tutor Dashboard",
+    description: "Web platform for scheduling and managing computer science tutoring sessions, built using JavaScript and HTML/CSS.",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    category: "Web Development",
     technologies: [
-      { name: "React", bgColor: "bg-blue-100", textColor: "text-blue-800" },
-      { name: "D3.js", bgColor: "bg-red-100", textColor: "text-red-800" },
-      { name: "Express", bgColor: "bg-gray-100", textColor: "text-gray-800" },
-      { name: "PostgreSQL", bgColor: "bg-green-100", textColor: "text-green-800" }
+      { name: "JavaScript", bgColor: "bg-blue-100", textColor: "text-blue-800" },
+      { name: "HTML/CSS", bgColor: "bg-orange-100", textColor: "text-orange-800" },
+      { name: "LocalStorage API", bgColor: "bg-green-100", textColor: "text-green-800" },
+      { name: "Responsive Design", bgColor: "bg-purple-100", textColor: "text-purple-800" }
     ],
     caseStudyUrl: "#",
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com"
+    githubUrl: "https://github.com/Ibek7",
+    liveUrl: "#"
   }
 ];
 
 // Skills section data
 export const frontendSkills = [
-  { name: "JavaScript / TypeScript", percentage: 95 },
-  { name: "React / Next.js", percentage: 90 },
-  { name: "CSS / Tailwind / SASS", percentage: 85 },
-  { name: "Vue.js / Angular", percentage: 80 }
+  { name: "HTML / CSS / JavaScript", percentage: 90 },
+  { name: "React / TypeScript", percentage: 85 },
+  { name: "UI/UX Design", percentage: 80 },
+  { name: "Responsive Design", percentage: 88 }
 ];
 
 export const backendSkills = [
-  { name: "Node.js / Express", percentage: 90 },
-  { name: "Python / Django", percentage: 75 },
-  { name: "SQL / NoSQL Databases", percentage: 85 },
-  { name: "GraphQL", percentage: 80 }
+  { name: "Python / Machine Learning", percentage: 85 },
+  { name: "Java / C++", percentage: 90 },
+  { name: "Data Structures & Algorithms", percentage: 92 },
+  { name: "Object-Oriented Programming", percentage: 88 }
 ];
 
 export const dataVisualizationSkills = [
-  { name: "D3.js", percentage: 80 },
-  { name: "Chart.js", percentage: 85 }
+  { name: "Statistical Analysis", percentage: 85 },
+  { name: "Data Analysis with Python", percentage: 80 }
 ];
 
 export const devopsSkills = [
-  { name: "Docker / Kubernetes", percentage: 75 },
-  { name: "CI/CD", percentage: 80 }
+  { name: "Git / GitHub", percentage: 85 },
+  { name: "Agile Methodologies", percentage: 75 }
 ];
 
 // Experience section data
 export const workExperience = [
   {
-    title: "Senior Software Engineer",
-    company: "TechCorp Inc.",
-    period: "Jan 2021 - Present",
-    description: "Led the development of a customer-facing dashboard that increased client retention by 25%. Managed a team of 5 engineers on various projects.",
+    title: "Computer Science/Math Major",
+    company: "DePauw University",
+    period: "Aug 2023 - Present",
+    description: "Currently pursuing a double major in Computer Science and Mathematics at DePauw University. Maintaining a 3.97 cumulative GPA and 4.00 major GPA. Active member of the Association for Computing Machinery (ACM) student chapter.",
     technologies: [
-      { name: "React", bgColor: "bg-blue-100", textColor: "text-blue-800" },
-      { name: "Node.js", bgColor: "bg-green-100", textColor: "text-green-800" },
-      { name: "MongoDB", bgColor: "bg-purple-100", textColor: "text-purple-800" }
+      { name: "Python", bgColor: "bg-blue-100", textColor: "text-blue-800" },
+      { name: "Java", bgColor: "bg-orange-100", textColor: "text-orange-800" },
+      { name: "C++", bgColor: "bg-green-100", textColor: "text-green-800" },
+      { name: "Data Structures", bgColor: "bg-purple-100", textColor: "text-purple-800" }
     ]
   },
   {
-    title: "Full-Stack Developer",
-    company: "InnovateX Solutions",
-    period: "Mar 2018 - Dec 2020",
-    description: "Developed and maintained multiple client projects. Optimized database queries resulting in 40% performance improvement. Led frontend architecture redesign.",
+    title: "Human Trafficking Research Project",
+    company: "Independent Research",
+    period: "Dec 2023 - Jan 2024",
+    description: "Identified human trafficking patterns in East Africa, achieving 82% model accuracy by building an AI+NLP solution. Analyzed datasets to identify patterns and potential risk factors related to human trafficking incidents.",
     technologies: [
-      { name: "Vue.js", bgColor: "bg-blue-100", textColor: "text-blue-800" },
-      { name: "Python", bgColor: "bg-green-100", textColor: "text-green-800" },
-      { name: "PostgreSQL", bgColor: "bg-purple-100", textColor: "text-purple-800" }
+      { name: "Python", bgColor: "bg-blue-100", textColor: "text-blue-800" },
+      { name: "ML", bgColor: "bg-orange-100", textColor: "text-orange-800" },
+      { name: "NLP", bgColor: "bg-green-100", textColor: "text-green-800" }
     ]
   },
   {
-    title: "Frontend Developer",
-    company: "WebCraft Agency",
-    period: "Jun 2016 - Feb 2018",
-    description: "Built responsive interfaces for 10+ client websites. Collaborated with design and UX teams. Improved site loading speed by 60% with optimization techniques.",
+    title: "Peer Tutor",
+    company: "DePauw University",
+    period: "Sep 2023 - Present",
+    description: "Provide one-on-one and group tutoring sessions for mathematics and computer science courses. Help students understand complex programming concepts, debug code, and improve problem-solving skills.",
     technologies: [
-      { name: "JavaScript", bgColor: "bg-blue-100", textColor: "text-blue-800" },
-      { name: "CSS/SASS", bgColor: "bg-green-100", textColor: "text-green-800" },
-      { name: "jQuery", bgColor: "bg-purple-100", textColor: "text-purple-800" }
+      { name: "Python", bgColor: "bg-blue-100", textColor: "text-blue-800" },
+      { name: "Java", bgColor: "bg-green-100", textColor: "text-green-800" },
+      { name: "Calculus", bgColor: "bg-purple-100", textColor: "text-purple-800" }
     ]
   }
 ];
@@ -112,26 +113,26 @@ export const workExperience = [
 // Blog section data
 export const blogPosts = [
   {
-    title: "Optimizing React Performance: Advanced Techniques",
-    excerpt: "Explore advanced techniques for improving your React application's performance through code splitting, memoization, and virtualization.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
-    date: "June 15, 2023",
+    title: "My Journey Learning Web Development",
+    excerpt: "Sharing my experience learning React and TypeScript to build this portfolio site, including challenges I faced and resources that helped me succeed.",
+    image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80",
+    date: "April 1, 2024",
     readTime: "5 min read",
     url: "#"
   },
   {
-    title: "Building Resilient Microservices Architecture",
-    excerpt: "A comprehensive guide to designing, implementing, and maintaining a scalable microservices ecosystem with fault tolerance.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2068&q=80",
-    date: "May 20, 2023",
+    title: "AI for Social Good: My Research Experience",
+    excerpt: "A look at my independent research using machine learning to analyze human trafficking patterns in East Africa and what I learned as a first-year student researcher.",
+    image: "https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    date: "February 10, 2024",
     readTime: "8 min read",
     url: "#"
   },
   {
-    title: "Scaling CSS Architecture for Enterprise Applications",
-    excerpt: "Learn proven strategies for managing CSS in large-scale applications, from methodology selection to organization principles.",
-    image: "https://images.unsplash.com/photo-1629654291663-b91ad427698f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
-    date: "April 3, 2023",
+    title: "Balancing Computer Science and Mathematics",
+    excerpt: "My experiences as a double major, how the two disciplines complement each other, and strategies for maintaining academic excellence across both fields.",
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+    date: "March 15, 2024",
     readTime: "6 min read",
     url: "#"
   }
