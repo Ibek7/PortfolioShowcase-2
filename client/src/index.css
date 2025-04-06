@@ -5,12 +5,9 @@
 @tailwind utilities;
 
 :root {
-  --royal-purple: #6A0DAD;
-  --royal-gold: #FFD700;
+  --royal-gold: #FFD700; /* Main gold accent color */
   --royal-gold-highlight: #FFF2AC; /* Lighter gold for reflective highlights */
   --royal-gold-shadow: #B8860B; /* Darker gold for depth */
-  --royal-navy: #000080;
-  --royal-burgundy: #800020;
   --royal-black: #000000; /* Pure black for maximum contrast */
   --royal-black-soft: #0A0A0A; /* Slightly softer black for layering */
   --royal-white: #FFFFF7; /* Warm white */
@@ -47,29 +44,29 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: rgba(25, 15, 35, 0.9);
+    background: rgba(0, 0, 0, 0.9);
   }
   
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, var(--royal-purple), #4A0080);
+    background: linear-gradient(to bottom, var(--royal-gold-shadow), var(--royal-gold));
     border-radius: 4px;
     border: 1px solid rgba(255, 215, 0, 0.3);
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #7B1FA2, var(--royal-purple));
+    background: linear-gradient(to bottom, var(--royal-gold), var(--royal-gold-highlight));
   }
   
   ::selection {
-    background-color: var(--royal-purple);
-    color: var(--royal-white);
+    background-color: var(--royal-gold);
+    color: var(--royal-black);
   }
 }
 
 @layer components {
   /* Royal Background Gradients */
   .bg-gradient {
-    background: linear-gradient(135deg, var(--royal-purple), var(--royal-black));
+    background: linear-gradient(135deg, var(--royal-black-soft), var(--royal-black));
     position: relative;
     overflow: hidden;
   }
@@ -165,11 +162,11 @@
   
   /* Elegant royal button styling */
   .royal-button {
-    background: linear-gradient(135deg, var(--royal-purple), #4A0080);
+    background: var(--royal-black);
     color: var(--royal-white);
     border: 1px solid var(--royal-gold);
     box-shadow: 
-      0 4px 16px rgba(106, 13, 173, 0.3),
+      0 4px 16px rgba(0, 0, 0, 0.3),
       inset 0 0 4px rgba(255, 215, 0, 0.2);
     transition: all 0.3s ease;
     position: relative;
@@ -190,11 +187,12 @@
   }
   
   .royal-button:hover {
-    background: linear-gradient(135deg, #5A00AD, var(--royal-purple));
+    background: rgba(10, 10, 10, 0.9);
     box-shadow: 
-      0 8px 24px rgba(106, 13, 173, 0.5),
+      0 8px 24px rgba(0, 0, 0, 0.5),
       inset 0 0 8px rgba(255, 215, 0, 0.3);
     transform: translateY(-2px);
+    color: var(--royal-gold);
   }
   
   .royal-button:hover::before {
@@ -266,7 +264,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(106, 13, 173, 0.05), rgba(255, 215, 0, 0.05));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(255, 215, 0, 0.05));
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     transition: clip-path 0.5s ease;
   }
@@ -274,7 +272,7 @@
   .project-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 
-      0 15px 30px -10px rgba(106, 13, 173, 0.3),
+      0 15px 30px rgba(0, 0, 0, 0.4),
       0 0 15px rgba(255, 215, 0, 0.2);
     border-color: rgba(255, 215, 0, 0.3);
   }
@@ -310,8 +308,8 @@
   
   .skill-progress {
     transition: width 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-    background: linear-gradient(90deg, var(--royal-purple), #9932CC);
-    border-right: 2px solid var(--royal-gold);
+    background: linear-gradient(90deg, var(--royal-gold-shadow), var(--royal-gold));
+    border-right: 2px solid var(--royal-gold-highlight);
     position: relative;
     overflow: hidden;
   }
@@ -388,7 +386,7 @@
     top: 0;
     bottom: -2rem;
     width: 2px;
-    background: linear-gradient(to bottom, var(--royal-purple), transparent);
+    background: linear-gradient(to bottom, var(--royal-gold), transparent);
     opacity: 0.5;
   }
   
@@ -401,7 +399,7 @@
     height: 10px;
     border-radius: 50%;
     background: var(--royal-gold);
-    border: 2px solid var(--royal-purple);
+    border: 2px solid var(--royal-black);
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
   }
   
