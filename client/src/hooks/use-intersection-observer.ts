@@ -12,7 +12,7 @@ export const useIntersectionObserver = ({
   triggerOnce = false
 }: IntersectionObserverOptions = {}) => {
   const [inView, setInView] = useState(false);
-  const ref = useRef<HTMLElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const enteredView = useRef(false);
 
   useEffect(() => {

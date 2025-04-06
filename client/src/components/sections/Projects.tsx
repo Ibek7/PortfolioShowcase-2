@@ -1,10 +1,12 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
 import { projects } from '@/data/portfolio-data';
 
 const Projects = () => {
-  const { ref, inView } = useIntersectionObserver({ threshold: 0.1, triggerOnce: true });
+  const { ref, inView } = useIntersectionObserver({ 
+    threshold: 0.1, 
+    triggerOnce: true
+  });
   
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,7 +29,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section py-24 bg-white">
+    <section id="projects" className="section py-24 bg-[#000000]">
       <div className="container mx-auto px-6 child-delay">
         <motion.div 
           className="text-center mb-16"
@@ -36,8 +38,8 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-gray-600 max-w-xl mx-auto font-serif">
+          <h2 className="text-4xl font-bold gold-accent font-['Cinzel'] mb-4">Featured Projects</h2>
+          <p className="text-white/70 max-w-xl mx-auto font-['Cormorant_Garamond'] text-lg">
             A curated selection of my work showcasing problem-solving abilities and technical expertise
           </p>
         </motion.div>
@@ -52,7 +54,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div 
               key={index}
-              className="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100"
+              className="project-card royal-card rounded-xl overflow-hidden border border-[#FFD700]/20"
               variants={itemVariants}
             >
               <div className="relative h-56 overflow-hidden">
@@ -61,36 +63,36 @@ const Projects = () => {
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full py-1 px-3 text-xs font-semibold">
+                <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-sm border border-[#FFD700]/40 rounded-full py-1 px-3 text-xs font-semibold text-[#FFD700]">
                   {project.category}
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 font-serif mb-4">
+              <div className="p-6 bg-black border-t border-[#FFD700]/20">
+                <h3 className="text-xl font-bold text-[#FFD700] mb-2 font-['Cinzel']">{project.title}</h3>
+                <p className="text-[#FFFFF7]/90 font-['Cormorant_Garamond'] text-lg mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
                     <span 
                       key={i} 
-                      className={`text-xs font-medium ${tech.bgColor} ${tech.textColor} px-2 py-1 rounded`}
+                      className="text-xs font-medium bg-black text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30"
                     >
                       {tech.name}
                     </span>
                   ))}
                 </div>
                 <div className="flex justify-between items-center">
-                  <a href={project.caseStudyUrl} className="text-primary-600 font-medium hover:text-primary-800 transition-colors">
+                  <a href={project.caseStudyUrl} className="text-[#FFD700] font-medium hover:text-[#FFD700]/80 transition-colors">
                     View Case Study →
                   </a>
                   <div className="flex gap-3">
-                    <a href={project.githubUrl} className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="GitHub Repository">
+                    <a href={project.githubUrl} className="text-[#FFD700]/70 hover:text-[#FFD700] transition-colors" aria-label="GitHub Repository">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                       </svg>
                     </a>
-                    <a href={project.liveUrl} className="text-gray-500 hover:text-gray-900 transition-colors" aria-label="Live Project">
+                    <a href={project.liveUrl} className="text-[#FFD700]/70 hover:text-[#FFD700] transition-colors" aria-label="Live Project">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
@@ -109,7 +111,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <a href="#" className="inline-flex items-center px-6 py-3 bg-primary-100 text-primary-800 rounded-lg font-medium transition-all hover:bg-primary-200">
+          <a href="#" className="inline-flex items-center px-6 py-3 bg-black text-[#FFD700] rounded-lg font-medium border border-[#FFD700]/30 transition-all hover:bg-[#FFD700]/10 font-['Cinzel']">
             View All Projects
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
