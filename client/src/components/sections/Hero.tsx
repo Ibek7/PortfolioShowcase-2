@@ -32,7 +32,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Cinzel'] font-bold leading-tight mb-8">
               <span className="block">Crafting Digital</span>
               <span className="block mt-1">
-                <span className="gold-accent">Elegance</span> with Code
+                <span className="gold-accent-glow" data-text="Elegance">Elegance</span> with <span className="gold-accent">Code</span>
               </span>
             </h1>
             

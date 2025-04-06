@@ -53,7 +53,7 @@ const Footer = () => {
   ];
   
   return (
-    <footer className="bg-[#11071F] py-16 relative overflow-hidden">
+    <footer className="bg-[#000000] py-16 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
@@ -78,9 +78,9 @@ const Footer = () => {
               }}
               className="relative text-2xl font-bold tracking-tight inline-block"
             >
-              <span className="gold-accent font-['Cinzel'] text-3xl">R</span>
+              <span className="gold-accent-glow font-['Cinzel'] text-3xl" data-text="R">R</span>
               <span className="text-white font-['Cinzel']">oyal</span>
-              <span className="gold-accent font-['Cinzel'] text-2xl">Dev</span>
+              <span className="gold-accent-glow font-['Cinzel'] text-2xl" data-text="Dev">Dev</span>
               <div className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
             </a>
             <p className="text-gray-400 mt-3 font-['Cormorant_Garamond'] text-lg max-w-md">

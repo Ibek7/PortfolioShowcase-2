@@ -9,7 +9,7 @@ const ParticlesBackground = () => {
   }, []);
 
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    await console.log(container);
+    console.log("Particles container loaded", container);
   }, []);
 
   return (
@@ -21,10 +21,14 @@ const ParticlesBackground = () => {
       options={{
         background: {
           color: {
-            value: "#11071F",
+            value: "#000000", // Pure black for maximum contrast
           },
         },
-        fpsLimit: 120,
+        fullScreen: {
+          enable: true,
+          zIndex: -1
+        },
+        fpsLimit: 60,
         interactivity: {
           events: {
             onClick: {
@@ -44,21 +48,20 @@ const ParticlesBackground = () => {
           },
           modes: {
             push: {
-              quantity: 1,
+              quantity: 2,
             },
             repulse: {
               distance: 100,
               duration: 0.4,
-            },
+            }
           },
         },
         particles: {
           color: {
             value: [
               "#FFD700", // Gold
-              "#6A0DAD", // Royal purple
-              "#800020", // Royal burgundy
-              "#E6E6FA", // Lavender (very subtle)
+              "#FFF2AC", // Lighter gold
+              "#B8860B", // Darker gold
             ],
           },
           links: {
@@ -72,16 +75,11 @@ const ParticlesBackground = () => {
             direction: "none",
             enable: true,
             outModes: {
-              default: "bounce",
+              default: "out",
             },
             random: true,
-            speed: 0.8,
+            speed: 0.5,
             straight: false,
-            attract: {
-              enable: true,
-              rotateX: 600,
-              rotateY: 1200
-            }
           },
           number: {
             density: {
@@ -91,58 +89,26 @@ const ParticlesBackground = () => {
             value: 40,
           },
           opacity: {
-            value: {
-              min: 0.1,
-              max: 0.3
-            },
+            value: 0.3,
             animation: {
               enable: true,
               speed: 0.3,
-              sync: false
+              minimumValue: 0.1,
             }
           },
           size: {
             value: { min: 1, max: 3 },
-            random: true,
             animation: {
               enable: true,
               speed: 2,
               minimumValue: 0.1,
-              sync: false
             }
           },
           shape: {
-            type: ["circle", "triangle", "polygon"],
-            polygon: {
-              sides: 6
-            }
-          },
+            type: ["circle", "triangle"]
+          }
         },
         detectRetina: true,
-        themes: [
-          {
-            name: "royal",
-            default: {
-              value: true,
-              mode: "dark",
-            },
-            options: {
-              background: {
-                color: "#11071F"
-              },
-              particles: {
-                color: {
-                  value: [
-                    "#FFD700", // Gold
-                    "#6A0DAD", // Royal purple
-                    "#800020", // Royal burgundy
-                    "#E6E6FA", // Lavender (very subtle)
-                  ]
-                }
-              }
-            }
-          }
-        ]
       }}
     />
   );

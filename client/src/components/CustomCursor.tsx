@@ -52,10 +52,9 @@ const CustomCursor = () => {
       backgroundColor: 'rgba(255, 215, 0, 0)', // Transparent 
       height: 24,
       width: 24,
-      borderColor: '#FFD700',
-      borderWidth: '1px',
-      borderStyle: 'solid',
-      opacity: 0.7,
+      border: '1px solid rgba(255, 215, 0, 0.5)',
+      boxShadow: '0 0 10px rgba(255, 215, 0, 0.3)',
+      opacity: 0.8,
       borderRadius: '50%'
     },
     hover: {
@@ -64,9 +63,8 @@ const CustomCursor = () => {
       backgroundColor: 'rgba(255, 215, 0, 0.05)',
       height: 40,
       width: 40,
-      borderColor: '#FFD700',
-      borderWidth: '2px',
-      borderStyle: 'solid',
+      border: '2px solid rgba(255, 215, 0, 0.8)',
+      boxShadow: '0 0 15px rgba(255, 215, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.2)',
       opacity: 1,
       borderRadius: '50%'
     }
@@ -99,17 +97,54 @@ const CustomCursor = () => {
       
       {/* Outer glow */}
       <motion.div 
-        className="fixed bg-gradient-to-r from-[#6A0DAD]/30 to-[#FFD700]/30 rounded-full blur-sm pointer-events-none z-40"
+        className="fixed bg-gradient-to-r from-[#FFD700]/30 via-[#FFF2AC]/25 to-[#B8860B]/20 rounded-full blur-md pointer-events-none z-40"
         animate={{
-          x: mousePosition.x - 20,
-          y: mousePosition.y - 20,
-          width: cursorVariant === 'hover' ? 60 : 40,
-          height: cursorVariant === 'hover' ? 60 : 40,
-          opacity: cursorVariant === 'hover' ? 0.5 : 0.25,
-          scale: cursorVariant === 'hover' ? 1.2 : 1
+          x: mousePosition.x - 30,
+          y: mousePosition.y - 30,
+          width: cursorVariant === 'hover' ? 80 : 60,
+          height: cursorVariant === 'hover' ? 80 : 60,
+          opacity: cursorVariant === 'hover' ? 0.6 : 0.3,
+          scale: cursorVariant === 'hover' ? 1.3 : 1
         }}
         transition={{ type: "tween", ease: "backOut", duration: 0.3 }}
       />
+      
+      {/* Additional subtle stardust effect */}
+      <motion.div 
+        className="fixed rounded-full pointer-events-none z-35 overflow-hidden"
+        animate={{
+          x: mousePosition.x - 40,
+          y: mousePosition.y - 40,
+          width: 120,
+          height: 120,
+          opacity: 0.15,
+        }}
+        transition={{ type: "tween", ease: "linear", duration: 0.2 }}
+      >
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="w-full h-full relative">
+          {[...Array(8)].map((_, i) => (
+            <motion.div 
+              key={i}
+              className="absolute w-1 h-1 bg-[#FFD700] rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                scale: [0, 1, 0],
+                opacity: [0, 1, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: i * 0.2,
+                repeatType: "loop"
+              }}
+            />
+          ))}
+        </div>
+      </motion.div>
     </>
   );
 };
