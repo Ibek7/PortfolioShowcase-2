@@ -54,9 +54,9 @@ const Contact = () => {
     }
   };
   
-  const inputClasses = "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors";
-  const labelClasses = "block text-gray-800 font-medium mb-2";
-  const errorClasses = "text-red-500 text-sm mt-1";
+  const inputClasses = "w-full px-4 py-3 border border-[#FFD700]/30 rounded-lg focus:ring-2 focus:ring-[#FFD700]/50 focus:border-[#FFD700]/50 transition-colors bg-black/60 text-[#FFFFF7] placeholder:text-[#FFFFF7]/40";
+  const labelClasses = "block text-[#FFD700] font-medium mb-2 font-['Cinzel']";
+  const errorClasses = "text-red-400 text-sm mt-1 font-['Cormorant_Garamond']";
   
   const contactItems = [
     { 
@@ -111,7 +111,7 @@ const Contact = () => {
   ];
   
   return (
-    <section id="contact" className="section py-24 bg-gradient">
+    <section id="contact" className="section py-24 bg-[#000000]">
       <div className="container mx-auto px-6 child-delay">
         <motion.div 
           className="text-center mb-16"
@@ -120,8 +120,8 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-          <p className="text-white/80 max-w-xl mx-auto font-serif">
+          <h2 className="text-4xl font-bold gold-accent-glow font-['Cinzel'] mb-4" data-text="Get In Touch">Get In Touch</h2>
+          <p className="text-[#FFFFF7]/70 max-w-xl mx-auto font-['Cormorant_Garamond'] text-lg italic">
             Have a project in mind or want to discuss potential opportunities? Let's connect!
           </p>
         </motion.div>
@@ -134,7 +134,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white rounded-xl p-8 shadow-xl">
+            <div className="bg-[#FFFFF7]/10 backdrop-blur-md rounded-xl p-8 shadow-xl border border-[#FFD700]/20">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
                   <label htmlFor="name" className={labelClasses}>Your Name</label>
@@ -184,7 +184,7 @@ const Contact = () => {
                 <motion.button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-primary-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-black text-[#FFD700] font-medium py-3 px-6 rounded-lg border border-[#FFD700]/30 hover:bg-[#FFD700]/10 transition-all focus:outline-none focus:ring-2 focus:ring-[#FFD700]/50 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed font-['Cinzel']"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -204,12 +204,12 @@ const Contact = () => {
             <div className="space-y-8">
               {contactItems.map((item, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white">
+                  <div className="w-12 h-12 bg-black border border-[#FFD700]/30 rounded-full flex items-center justify-center text-[#FFD700] shadow-[0_0_10px_rgba(255,215,0,0.2)]">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                    <p className="text-white/80 font-serif">
+                    <h3 className="text-xl font-bold text-[#FFD700] font-['Cinzel'] mb-2">{item.title}</h3>
+                    <p className="text-[#FFFFF7]/80 font-['Cormorant_Garamond'] text-lg">
                       {item.content}
                     </p>
                   </div>
@@ -218,7 +218,7 @@ const Contact = () => {
             </div>
             
             <div className="mt-12">
-              <h3 className="text-xl font-bold text-white mb-4">Connect With Me</h3>
+              <h3 className="text-xl font-bold text-[#FFD700] font-['Cinzel'] mb-4">Connect With Me</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((link, index) => (
                   <motion.a 
@@ -226,8 +226,8 @@ const Contact = () => {
                     href={link.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                    whileHover={{ scale: 1.1 }}
+                    className="w-12 h-12 bg-black border border-[#FFD700]/30 rounded-full flex items-center justify-center text-[#FFD700] hover:bg-[#FFD700]/10 hover:border-[#FFD700]/50 transition-all shadow-[0_0_10px_rgba(255,215,0,0.1)]"
+                    whileHover={{ scale: 1.1, boxShadow: "0 0 15px rgba(255,215,0,0.3)" }}
                     whileTap={{ scale: 0.9 }}
                   >
                     {link.icon}

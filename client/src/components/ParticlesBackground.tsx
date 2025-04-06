@@ -68,8 +68,8 @@ const ParticlesBackground = () => {
             color: "#FFD700",
             distance: 150,
             enable: true,
-            opacity: 0.4, // Increased link opacity
-            width: 1.2, // Slightly thicker links
+            opacity: 0.6, // Further increased link opacity
+            width: 1.5, // Thicker links for more visibility
           },
           move: {
             direction: "none",
@@ -78,30 +78,30 @@ const ParticlesBackground = () => {
               default: "out",
             },
             random: true,
-            speed: 0.5,
-            straight: false,
+            speed: 0.7,
+            straight: false
           },
           number: {
             density: {
               enable: true,
-              area: 600, // Reduced area = more particles
+              area: 500, // Further reduced area = even more particles
             },
-            value: 80, // Increased particle count
+            value: 100, // Further increased particle count
           },
           opacity: {
-            value: 0.5, // Increased base opacity
+            value: 0.7, // Further increased base opacity
             animation: {
               enable: true,
               speed: 0.3,
-              minimumValue: 0.2, // Higher minimum opacity
+              minimumValue: 0.3, // Higher minimum opacity
             }
           },
           size: {
-            value: { min: 1.5, max: 4 }, // Larger particles
+            value: { min: 1.8, max: 5 }, // Larger particles
             animation: {
               enable: true,
               speed: 2,
-              minimumValue: 0.5, // Larger minimum size
+              minimumValue: 0.8, // Larger minimum size
             }
           },
           shape: {

@@ -26,7 +26,7 @@ const Blog = () => {
   };
   
   return (
-    <section id="blog" className="section py-24 bg-gray-50">
+    <section id="blog" className="section py-24 bg-[#000000]">
       <div className="container mx-auto px-6 child-delay">
         <motion.div 
           className="text-center mb-16"
@@ -35,8 +35,8 @@ const Blog = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Articles</h2>
-          <p className="text-gray-600 max-w-xl mx-auto font-serif">
+          <h2 className="text-4xl font-bold text-[#FFD700] font-['Cinzel'] mb-4">Latest Articles</h2>
+          <p className="text-white/70 max-w-xl mx-auto font-['Cormorant_Garamond'] text-lg">
             Thoughts, technical guides, and industry insights from my experience
           </p>
         </motion.div>
@@ -51,10 +51,11 @@ const Blog = () => {
           {blogPosts.map((post, index) => (
             <motion.article 
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl border border-gray-100 transition-all"
+              className="bg-black rounded-xl overflow-hidden border border-[#FFD700]/30 shadow-[0_0_15px_rgba(255,215,0,0.1)] hover:shadow-[0_0_20px_rgba(255,215,0,0.2)] transition-all"
               variants={itemVariants}
+              whileHover={{ y: -5 }}
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden border-b border-[#FFD700]/20">
                 <img 
                   src={post.image} 
                   alt={post.title} 
@@ -62,7 +63,7 @@ const Blog = () => {
                 />
               </div>
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
+                <div className="flex items-center text-sm text-[#FFD700]/70 mb-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
@@ -70,11 +71,11 @@ const Blog = () => {
                   <span className="mx-2">•</span>
                   <span>{post.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h3>
-                <p className="text-gray-600 font-serif mb-4">
+                <h3 className="text-xl font-bold text-[#FFD700] font-['Cinzel'] mb-2">{post.title}</h3>
+                <p className="text-white/70 font-['Cormorant_Garamond'] mb-4 text-lg">
                   {post.excerpt}
                 </p>
-                <a href={post.url} className="text-primary-600 font-medium hover:text-primary-800 transition-colors">
+                <a href={post.url} className="inline-block text-[#FFD700] font-medium hover:text-[#FFD700]/80 transition-colors border-b border-[#FFD700]/30 hover:border-[#FFD700]/60 pb-1">
                   Read Article →
                 </a>
               </div>
@@ -89,7 +90,7 @@ const Blog = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <a href="#" className="inline-flex items-center px-6 py-3 bg-primary-100 text-primary-800 rounded-lg font-medium transition-all hover:bg-primary-200">
+          <a href="#" className="inline-flex items-center px-8 py-3 border border-[#FFD700]/40 text-[#FFD700] rounded-lg font-['Cinzel'] font-medium transition-all hover:bg-[#FFD700]/10 hover:shadow-[0_0_15px_rgba(255,215,0,0.2)]">
             View All Articles
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
