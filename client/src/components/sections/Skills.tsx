@@ -32,7 +32,7 @@ const SkillBar = ({ name, percentage, delay = 0 }: SkillBarProps) => {
 
 const SkillCategory = ({ title, skills, delayOffset = 0 }: { title: string, skills: any[], delayOffset?: number }) => {
   return (
-    <div className="royal-card p-6 rounded-xl">
+    <div className="royal-card p-6 rounded-xl bg-black/40 backdrop-blur-md border border-[#FFD700]/20 shadow-[0_0_15px_rgba(255,215,0,0.1)]">
       <h3 className="text-xl font-bold mb-6 text-[#FFD700] font-['Cinzel'] royal-heading">{title}</h3>
       
       <div className="space-y-6">

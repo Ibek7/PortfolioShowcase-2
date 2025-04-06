@@ -134,7 +134,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-[#FFFFF7]/10 backdrop-blur-md rounded-xl p-8 shadow-xl border border-[#FFD700]/20">
+            <div className="bg-[#FFFFF7]/5 backdrop-blur-md rounded-xl p-8 shadow-xl border border-[#FFD700]/20">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
                   <label htmlFor="name" className={labelClasses}>Your Name</label>

@@ -67,7 +67,7 @@ const Projects = () => {
                   {project.category}
                 </div>
               </div>
-              <div className="p-6 bg-black border-t border-[#FFD700]/20">
+              <div className="p-6 bg-black/40 backdrop-blur-md border-t border-[#FFD700]/20">
                 <h3 className="text-xl font-bold text-[#FFD700] mb-2 font-['Cinzel']">{project.title}</h3>
                 <p className="text-[#FFFFF7]/90 font-['Cormorant_Garamond'] text-lg mb-4">
                   {project.description}
@@ -76,7 +76,7 @@ const Projects = () => {
                   {project.technologies.map((tech, i) => (
                     <span 
                       key={i} 
-                      className="text-xs font-medium bg-black text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30"
+                      className="text-xs font-medium bg-black/50 backdrop-blur-sm text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30"
                     >
                       {tech.name}
                     </span>
@@ -111,7 +111,7 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <a href="#" className="inline-flex items-center px-6 py-3 bg-black text-[#FFD700] rounded-lg font-medium border border-[#FFD700]/30 transition-all hover:bg-[#FFD700]/10 font-['Cinzel']">
+          <a href="#" className="inline-flex items-center px-6 py-3 bg-black/40 backdrop-blur-md text-[#FFD700] rounded-lg font-medium border border-[#FFD700]/30 transition-all hover:bg-black/60 hover:shadow-[0_0_15px_rgba(255,215,0,0.2)] font-['Cinzel']">
             View All Projects
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />

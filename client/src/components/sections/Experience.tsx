@@ -60,7 +60,7 @@ const Experience = () => {
                 <div className="flex flex-col md:flex-row items-center">
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 text-left md:order-1'} mb-8 md:mb-0`}>
                     {index % 2 === 0 ? (
-                      <div className="royal-card p-6 rounded-xl border border-[#FFD700]/20 hover:shadow-[0_10px_25px_rgba(255,215,0,0.2)] transition-all">
+                      <div className="royal-card p-6 rounded-xl bg-black/40 backdrop-blur-md border border-[#FFD700]/20 shadow-[0_0_15px_rgba(255,215,0,0.1)] hover:shadow-[0_10px_25px_rgba(255,215,0,0.2)] transition-all">
                         <h3 className="text-xl font-bold text-[#FFD700] font-['Cinzel'] mb-2">{job.title}</h3>
                         <h4 className="text-[#FFD700]/80 font-medium mb-3 font-['Cinzel']">{job.company}</h4>
                         <p className="text-[#FFFFF7]/90 font-['Cormorant_Garamond'] text-lg mb-4">
@@ -68,7 +68,7 @@ const Experience = () => {
                         </p>
                         <div className="flex flex-wrap gap-2 justify-end">
                           {job.technologies.map((tech, i) => (
-                            <span key={i} className="text-xs font-medium bg-black text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30">
+                            <span key={i} className="text-xs font-medium bg-black/50 backdrop-blur-sm text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30">
                               {tech.name}
                             </span>
                           ))}
@@ -99,7 +99,7 @@ const Experience = () => {
                         {job.period}
                       </div>
                     ) : (
-                      <div className="royal-card p-6 rounded-xl border border-[#FFD700]/20 hover:shadow-[0_10px_25px_rgba(255,215,0,0.2)] transition-all">
+                      <div className="royal-card p-6 rounded-xl bg-black/40 backdrop-blur-md border border-[#FFD700]/20 shadow-[0_0_15px_rgba(255,215,0,0.1)] hover:shadow-[0_10px_25px_rgba(255,215,0,0.2)] transition-all">
                         <h3 className="text-xl font-bold text-[#FFD700] font-['Cinzel'] mb-2">{job.title}</h3>
                         <h4 className="text-[#FFD700]/80 font-medium mb-3 font-['Cinzel']">{job.company}</h4>
                         <p className="text-[#FFFFF7]/90 font-['Cormorant_Garamond'] text-lg mb-4">
@@ -107,7 +107,7 @@ const Experience = () => {
                         </p>
                         <div className="flex flex-wrap gap-2">
                           {job.technologies.map((tech, i) => (
-                            <span key={i} className="text-xs font-medium bg-black text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30">
+                            <span key={i} className="text-xs font-medium bg-black/50 backdrop-blur-sm text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30">
                               {tech.name}
                             </span>
                           ))}

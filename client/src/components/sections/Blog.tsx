@@ -51,7 +51,7 @@ const Blog = () => {
           {blogPosts.map((post, index) => (
             <motion.article 
               key={index}
-              className="bg-black rounded-xl overflow-hidden border border-[#FFD700]/30 shadow-[0_0_15px_rgba(255,215,0,0.1)] hover:shadow-[0_0_20px_rgba(255,215,0,0.2)] transition-all"
+              className="bg-black/40 backdrop-blur-md rounded-xl overflow-hidden border border-[#FFD700]/20 shadow-[0_0_15px_rgba(255,215,0,0.1)] hover:shadow-[0_0_20px_rgba(255,215,0,0.2)] transition-all"
               variants={itemVariants}
               whileHover={{ y: -5 }}
             >
@@ -90,7 +90,7 @@ const Blog = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <a href="#" className="inline-flex items-center px-8 py-3 border border-[#FFD700]/40 text-[#FFD700] rounded-lg font-['Cinzel'] font-medium transition-all hover:bg-[#FFD700]/10 hover:shadow-[0_0_15px_rgba(255,215,0,0.2)]">
+          <a href="#" className="inline-flex items-center px-8 py-3 bg-black/40 backdrop-blur-md border border-[#FFD700]/30 text-[#FFD700] rounded-lg font-['Cinzel'] font-medium transition-all hover:bg-black/60 hover:shadow-[0_0_15px_rgba(255,215,0,0.2)]">
             View All Articles
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
