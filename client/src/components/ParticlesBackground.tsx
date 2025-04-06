@@ -68,8 +68,8 @@ const ParticlesBackground = () => {
             color: "#FFD700",
             distance: 150,
             enable: true,
-            opacity: 0.6, // Further increased link opacity
-            width: 1.5, // Thicker links for more visibility
+            opacity: 0.3, // Reduced link opacity for dimmer effect
+            width: 1.2, // Slightly thinner links to match dimmer aesthetic
           },
           move: {
             direction: "none",
@@ -84,16 +84,16 @@ const ParticlesBackground = () => {
           number: {
             density: {
               enable: true,
-              area: 500, // Further reduced area = even more particles
+              area: 700, // Increased area for fewer particles
             },
-            value: 100, // Further increased particle count
+            value: 80, // Reduced particle count for subtler effect
           },
           opacity: {
-            value: 0.9, // Increased base opacity for more brightness
+            value: 0.5, // Reduced opacity for dimmer particles
             animation: {
               enable: true,
               speed: 0.3,
-              minimumValue: 0.5, // Higher minimum opacity for consistent visibility
+              minimumValue: 0.2, // Lower minimum opacity for dimmer effect
             }
           },
           size: {
