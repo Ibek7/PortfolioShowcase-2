@@ -15,12 +15,12 @@ const SkillBar = ({ name, percentage, delay = 0 }: SkillBarProps) => {
   return (
     <div ref={skillRef}>
       <div className="flex justify-between mb-2">
-        <span className="font-medium text-gray-800">{name}</span>
-        <span className="text-gray-600">{percentage}%</span>
+        <span className="font-medium text-[#FFD700] font-['Cinzel']">{name}</span>
+        <span className="text-[#FFFFF7] font-['Cormorant_Garamond'] text-lg">{percentage}%</span>
       </div>
-      <div className="skill-bar h-2 bg-gray-200 rounded-full">
+      <div className="skill-bar h-3 bg-black/50 rounded-full border border-[#FFD700]/20">
         <motion.div 
-          className="skill-progress h-full bg-primary-600 rounded-full"
+          className="skill-progress h-full rounded-full"
           initial={{ width: "0%" }}
           animate={isInView ? { width: `${percentage}%` } : { width: "0%" }}
           transition={{ duration: 1, delay: delay, ease: "easeOut" }}
@@ -32,8 +32,8 @@ const SkillBar = ({ name, percentage, delay = 0 }: SkillBarProps) => {
 
 const SkillCategory = ({ title, skills, delayOffset = 0 }: { title: string, skills: any[], delayOffset?: number }) => {
   return (
-    <>
-      <h3 className="text-xl font-bold mb-6 text-gray-900">{title}</h3>
+    <div className="royal-card p-6 rounded-xl">
+      <h3 className="text-xl font-bold mb-6 text-[#FFD700] font-['Cinzel'] royal-heading">{title}</h3>
       
       <div className="space-y-6">
         {skills.map((skill, index) => (
@@ -45,7 +45,7 @@ const SkillCategory = ({ title, skills, delayOffset = 0 }: { title: string, skil
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
@@ -74,7 +74,7 @@ const Skills = () => {
   };
   
   return (
-    <section id="skills" className="section py-24 bg-gray-50">
+    <section id="skills" className="section py-24 bg-[#000000]">
       <div ref={ref} className="container mx-auto px-6 child-delay">
         <motion.div 
           className="text-center mb-16"
@@ -83,8 +83,8 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
-          <p className="text-gray-600 max-w-xl mx-auto font-serif">
+          <h2 className="text-4xl font-bold gold-accent font-['Cinzel'] mb-4">Technical Skills</h2>
+          <p className="text-[#FFFFF7]/70 max-w-xl mx-auto font-['Cormorant_Garamond'] text-lg">
             Technologies and tools I've mastered throughout my professional journey
           </p>
         </motion.div>
