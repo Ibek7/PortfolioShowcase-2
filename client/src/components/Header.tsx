@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSmoothScroll } from '@/hooks/use-smooth-scroll';
 
 interface HeaderProps {
   activeSection: string;
@@ -8,6 +9,18 @@ interface HeaderProps {
 const Header = ({ activeSection }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
+  // Initialize the smooth scroll utility with royal luxury animation settings
+  const smoothScroll = useSmoothScroll({ 
+    offset: 80, 
+    duration: 1200, 
+    easing: (t) => {
+      // Custom easing function for ultra-luxurious scrolling experience
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+  });
   
   useEffect(() => {
     const handleScroll = () => {
@@ -20,13 +33,7 @@ const Header = ({ activeSection }: HeaderProps) => {
   
   const scrollToSection = (sectionId: string) => {
     setIsOpen(false);
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 80,
-        behavior: 'smooth'
-      });
-    }
+    smoothScroll(sectionId);
   };
   
   const navLinks = [

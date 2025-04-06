@@ -1,6 +1,17 @@
 import { motion } from 'framer-motion';
+import { useSmoothScroll } from '@/hooks/use-smooth-scroll';
 
 const Hero = () => {
+  const smoothScroll = useSmoothScroll({ 
+    offset: 80, 
+    duration: 1200,
+    easing: (t) => {
+      // Ultra-luxurious gold-inspired easing function
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+  });
   return (
     <section id="home" className="section pt-32 pb-24 overflow-hidden relative min-h-screen flex items-center">
       <div className="container mx-auto px-6 child-delay pt-16">
@@ -43,26 +54,27 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-5">
-              <motion.a 
-                href="#projects" 
+              <motion.button 
+                onClick={() => smoothScroll('projects')}
                 className="royal-button px-8 py-4 rounded-lg font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(106, 13, 173, 0.4)" }}
+                whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.3)" }}
                 whileTap={{ scale: 0.97 }}
               >
                 Explore Portfolio
-              </motion.a>
+              </motion.button>
               
-              <motion.a 
-                href="#contact" 
+              <motion.button 
+                onClick={() => smoothScroll('contact')}
                 className="px-8 py-4 bg-transparent border border-[#FFD700] text-white rounded-lg font-medium hover:bg-[#FFD700]/10 transition-all duration-300 font-['Cinzel']"
                 whileHover={{ 
                   backgroundColor: "rgba(255, 215, 0, 0.1)",
-                  borderColor: "rgba(255, 215, 0, 0.8)"
+                  borderColor: "rgba(255, 215, 0, 0.8)",
+                  boxShadow: "0 0 15px rgba(255, 215, 0, 0.3)"
                 }}
                 whileTap={{ scale: 0.97 }}
               >
                 Get in Touch
-              </motion.a>
+              </motion.button>
             </div>
           </motion.div>
           
@@ -168,27 +180,78 @@ const Hero = () => {
           ))}
         </div>
         
-        {/* Scroll indicator */}
+        {/* Enhanced scroll indicator with ultra-luxurious styling */}
         <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer gold-shimmer"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
+          animate={{ 
+            opacity: 1,
+            y: [0, 10, 0]
+          }}
+          transition={{ 
+            delay: 1.2, 
+            duration: 2,
+            y: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+          onClick={() => smoothScroll('projects')}
+          whileHover={{ scale: 1.1 }}
         >
-          <p className="text-white/70 mb-2 font-['Cinzel'] text-sm">Scroll Down</p>
-          <motion.div 
-            className="w-1 h-8 rounded-full border border-[#FFD700] relative overflow-hidden"
-            animate={{
-              borderColor: ["rgba(255, 215, 0, 0.4)", "rgba(255, 215, 0, 0.8)", "rgba(255, 215, 0, 0.4)"],
-            }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
+          <p className="gold-accent-glow mb-3 font-['Cinzel'] text-sm tracking-widest" data-text="EXPLORE">EXPLORE</p>
+          
+          <div className="relative w-8 h-12 flex items-center justify-center">
+            {/* Outer decorative frame */}
             <motion.div 
-              className="w-full bg-[#FFD700] absolute top-0 bottom-0 left-0 right-0"
-              animate={{ y: ["0%", "100%", "0%"] }}
+              className="absolute inset-0 border border-[#FFD700]/50 rounded-full"
+              animate={{
+                boxShadow: ["0 0 5px rgba(255, 215, 0, 0.3)", "0 0 10px rgba(255, 215, 0, 0.6)", "0 0 5px rgba(255, 215, 0, 0.3)"],
+                borderColor: ["rgba(255, 215, 0, 0.3)", "rgba(255, 215, 0, 0.7)", "rgba(255, 215, 0, 0.3)"],
+              }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-          </motion.div>
+            
+            {/* Inner animated circle */}
+            <motion.div 
+              className="w-2 h-2 rounded-full bg-[#FFD700] absolute z-10"
+              animate={{ 
+                y: [-5, 5, -5],
+                boxShadow: [
+                  "0 0 5px rgba(255, 215, 0, 0.6), 0 0 10px rgba(255, 215, 0, 0.3)",
+                  "0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5)",
+                  "0 0 5px rgba(255, 215, 0, 0.6), 0 0 10px rgba(255, 215, 0, 0.3)"
+                ]
+              }}
+              transition={{ 
+                duration: 1.5, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
+            {/* Decorative arrow */}
+            <motion.svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="absolute bottom-0 w-4 h-4 text-[#FFD700]" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+              animate={{
+                y: [0, 2, 0],
+                opacity: [0.7, 1, 0.7]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </motion.svg>
+          </div>
         </motion.div>
       </div>
     </section>

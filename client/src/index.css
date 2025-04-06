@@ -122,9 +122,18 @@
       0 0 15px rgba(255, 215, 0, 0.1);
     position: relative;
     z-index: 1;
+    transition: all 0.5s ease;
   }
   
-  /* Enhanced reflective effect for important gold text */
+  .gold-accent:hover {
+    text-shadow: 
+      0 0 10px rgba(255, 215, 0, 0.6),
+      0 0 20px rgba(255, 215, 0, 0.4),
+      0 0 30px rgba(255, 215, 0, 0.2);
+    letter-spacing: 0.03em;
+  }
+  
+  /* Ultra-luxurious reflective effect for important gold text */
   .gold-accent-glow {
     color: var(--royal-gold);
     text-shadow: 
@@ -145,6 +154,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
+    transform-style: preserve-3d;
+    perspective: 500px;
   }
   
   .gold-accent-glow::after {
@@ -154,7 +165,8 @@
     top: 0;
     z-index: -1;
     color: transparent;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    animation: goldPulse 4s infinite alternate;
   }
   
   .gold-accent-glow::before {
@@ -168,6 +180,31 @@
     filter: blur(3px);
     opacity: 0.5;
     transform: translateY(1px);
+    animation: goldFloating 6s ease-in-out infinite;
+  }
+  
+  /* New subtle shimmer effect for gold elements */
+  .gold-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gold-shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: goldShimmer 6s linear infinite;
+    pointer-events: none;
   }
   
   .gold-border {
@@ -250,6 +287,49 @@
     opacity: 0;
     animation: fadeIn 0.8s ease-in-out forwards;
     animation-delay: 0.2s;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .section:hover::before {
+    opacity: 1;
+  }
+  
+  /* Section transition animations */
+  .section-enter {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .section-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  .section-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .section-exit-active {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.8s, transform 0.8s;
   }
   
   .child-delay > * {
@@ -569,5 +649,41 @@
   100% {
     opacity: 0;
     transform: scale(0) rotate(360deg);
+  }
+}
+
+/* Gold floating effect animation */
+@keyframes goldFloating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+/* Gold shimmer effect for highlights */
+@keyframes goldShimmer {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
+
+/* Scroll indicator pulse animation */
+@keyframes scrollPulse {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
   }
 }

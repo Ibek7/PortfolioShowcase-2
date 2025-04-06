@@ -40,7 +40,7 @@ const ParticlesBackground = () => {
               mode: "repulse",
               parallax: {
                 enable: true,
-                force: 10,
+                force: 8,
                 smooth: 10
               }
             },
@@ -48,11 +48,17 @@ const ParticlesBackground = () => {
           },
           modes: {
             push: {
-              quantity: 2,
+              quantity: 3,
             },
             repulse: {
-              distance: 100,
-              duration: 0.4,
+              distance: 120,
+              duration: 0.5,
+            },
+            grab: {
+              distance: 140,
+              links: {
+                opacity: 0.3
+              }
             }
           },
         },
@@ -62,53 +68,80 @@ const ParticlesBackground = () => {
               "#FFD700", // Gold
               "#FFF2AC", // Lighter gold
               "#B8860B", // Darker gold
+              "#FFDF00", // Golden yellow
+              "#DAA520"  // Golden rod
             ],
           },
           links: {
             color: "#FFD700",
-            distance: 150,
+            distance: 170,
             enable: true,
-            opacity: 0.3, // Reduced link opacity for dimmer effect
-            width: 1.2, // Slightly thinner links to match dimmer aesthetic
+            opacity: 0.3,
+            width: 1.2,
+            triangles: {
+              enable: true,
+              frequency: 0.05,
+              opacity: 0.1
+            }
           },
           move: {
             direction: "none",
             enable: true,
             outModes: {
-              default: "out",
+              default: "bounce",
             },
             random: true,
-            speed: 0.7,
-            straight: false
+            speed: 0.8,
+            straight: false,
+            trail: {
+              enable: true,
+              length: 3,
+              fillColor: "#000000"
+            }
           },
           number: {
             density: {
               enable: true,
-              area: 700, // Increased area for fewer particles
+              area: 800,
             },
-            value: 80, // Reduced particle count for subtler effect
+            value: 90, // Slightly increased particle count for better visibility in all sections
           },
           opacity: {
-            value: 0.5, // Reduced opacity for dimmer particles
+            value: 0.5,
             animation: {
               enable: true,
               speed: 0.3,
-              minimumValue: 0.2, // Lower minimum opacity for dimmer effect
+              minimumValue: 0.2,
+              sync: false
             }
           },
           size: {
-            value: { min: 1.8, max: 5 }, // Larger particles
+            value: { min: 1.2, max: 4.5 },
             animation: {
               enable: true,
               speed: 2,
-              minimumValue: 0.8, // Larger minimum size
+              minimumValue: 0.6,
+              sync: false
             }
           },
           shape: {
-            type: ["circle", "triangle"]
+            type: ["circle", "triangle", "star"],
+            options: {
+              star: {
+                sides: 5
+              }
+            }
+          },
+          twinkle: {
+            particles: {
+              enable: true,
+              frequency: 0.05,
+              opacity: 1
+            }
           }
         },
         detectRetina: true,
+        smooth: true
       }}
     />
   );
