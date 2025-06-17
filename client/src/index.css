@@ -4,18 +4,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --royal-gold: #FFD700; /* Main gold accent color */
-  --royal-gold-highlight: #FFF2AC; /* Lighter gold for reflective highlights */
-  --royal-gold-shadow: #B8860B; /* Darker gold for depth */
-  --royal-black: #000000; /* Pure black for maximum contrast */
-  --royal-black-soft: #0A0A0A; /* Slightly softer black for layering */
-  --royal-white: #FFFFF7; /* Warm white */
-}
-
 @layer base {
+  :root {
+    /* Core HSL variables for Tailwind theming */
+    /* Format: hue saturation lightness (space-separated) */
+    --background: 0 0% 0%; /* Corresponds to your --royal-black #000000 */
+    --foreground: 60 100% 98.2%; /* Corresponds to your --royal-white #FFFFF7 */
+    
+    /* Assuming slate-200 is approx HSL 210 40% 96.1% */
+    /* Or, choose one of your royal colors and convert to HSL components */
+    --border: 210 40% 96.1%; 
+
+    /* Your existing royal color palette (can be used directly or for reference) */
+    --royal-gold: #FFD700; /* Main gold accent color */
+    --royal-gold-highlight: #FFF2AC; /* Lighter gold for reflective highlights */
+    --royal-gold-shadow: #B8860B; /* Darker gold for depth */
+    --royal-black: #000000; /* Pure black for maximum contrast */
+    --royal-black-soft: #0A0A0A; /* Slightly softer black for layering */
+    --royal-white: #FFFFF7; /* Warm white */
+  }
+
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   html {
@@ -23,9 +33,7 @@
   }
 
   body {
-    @apply font-sans antialiased text-foreground;
-    background-color: var(--royal-black);
-    color: var(--royal-white);
+    @apply font-sans antialiased bg-background text-foreground;
     cursor: none;
   }
 
