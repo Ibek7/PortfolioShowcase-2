@@ -107,7 +107,7 @@ const ParticlesBackground = () => {
             value: 90, // Slightly increased particle count for better visibility in all sections
           },
           opacity: {
-            value: 0.5,
+            value: 0.4,
             animation: {
               enable: true,
               speed: 0.3,

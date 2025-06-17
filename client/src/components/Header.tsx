@@ -62,12 +62,13 @@ const Header = ({ activeSection }: HeaderProps) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="gold-accent font-['Cinzel'] text-3xl">R</span>
-          <span className="text-white font-['Cinzel']">oyal</span>
-          <span className="gold-accent font-['Cinzel'] text-2xl">Dev</span>
+          <span className="gold-accent font-['Cinzel'] text-3xl">P</span>
+          <span className="gold-accent font-['Cinzel'] text-2xl">or</span>
+          <span className="text-white font-['Cinzel']">tfo</span>
+          <span className="gold-accent font-['Cinzel'] text-2xl">lio.</span>
           <div className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
         </motion.a>
-        
+       
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-10">
           {navLinks.map((link, index) => (

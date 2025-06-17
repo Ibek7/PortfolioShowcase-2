@@ -11,11 +11,11 @@ interface SkillBarProps {
 const SkillBar = ({ name, percentage, delay = 0 }: SkillBarProps) => {
   const skillRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(skillRef, { once: true, margin: "-100px 0px" });
-  
+ 
   return (
     <div ref={skillRef}>
       <div className="flex justify-between mb-2">
-        <span className="font-medium text-[#FFD700] font-['Cinzel']">{name}</span>
+        <span className="font-medium text-white font-['Cinzel']">{name}</span>
         <span className="text-[#FFFFF7] font-['Cormorant_Garamond'] text-lg">{percentage}%</span>
       </div>
       <div className="skill-bar h-3 bg-black/50 rounded-full border border-[#FFD700]/20">
@@ -33,7 +33,7 @@ const SkillBar = ({ name, percentage, delay = 0 }: SkillBarProps) => {
 const SkillCategory = ({ title, skills, delayOffset = 0 }: { title: string, skills: any[], delayOffset?: number }) => {
   return (
     <div className="royal-card p-6 rounded-xl bg-black/40 backdrop-blur-md border border-[#FFD700]/20 shadow-[0_0_15px_rgba(255,215,0,0.1)]">
-      <h3 className="text-xl font-bold mb-6 text-[#FFD700] font-['Cinzel'] royal-heading">{title}</h3>
+      <h3 className="text-xl font-bold mb-6 text-white font-['Cinzel'] royal-heading">{title}</h3>
       
       <div className="space-y-6">
         {skills.map((skill, index) => (

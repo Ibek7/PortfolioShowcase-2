@@ -39,7 +39,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl font-bold gold-accent font-['Cinzel'] mb-4">Featured Projects</h2>
-          <p className="text-white/70 max-w-xl mx-auto font-['Cormorant_Garamond'] text-lg">
+          <p className="text-white max-w-xl mx-auto font-['Cormorant_Garamond'] text-lg">
             A curated selection of my work showcasing problem-solving abilities and technical expertise
           </p>
         </motion.div>
@@ -57,23 +57,43 @@ const Projects = () => {
               className="project-card royal-card rounded-xl overflow-hidden border border-[#FFD700]/20"
               variants={itemVariants}
             >
-              <div className="relative h-56 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-                <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-sm border border-[#FFD700]/40 rounded-full py-1 px-3 text-xs font-semibold text-[#FFD700]">
-                  {project.category}
+              {project.title === "Software Engineer Portfolio" ? (
+                <div className="relative h-56 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt=".NET MAUI & Azure Traveler: Travel Companion App" 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-sm border border-[#FFD700]/40 rounded-full py-1 px-3 text-xs font-semibold text-[#FFD700]">
+                    AI Travel App
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="relative h-56 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                  <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-sm border border-[#FFD700]/40 rounded-full py-1 px-3 text-xs font-semibold text-[#FFD700]">
+                    {project.category}
+                  </div>
+                </div>
+              )}
               <div className="p-6 bg-black/40 backdrop-blur-md border-t border-[#FFD700]/20">
-                <h3 className="text-xl font-bold text-[#FFD700] mb-2 font-['Cinzel']">{project.title}</h3>
+                <h3 className="text-xl font-bold text-[#FFD700] mb-2 font-['Cinzel']">{project.title === "Software Engineer Portfolio" ? ".NET MAUI & Azure Traveler: Travel Companion App" : project.title}</h3>
                 <p className="text-[#FFFFF7]/90 font-['Cormorant_Garamond'] text-lg mb-4">
-                  {project.description}
+                  {project.title === "Software Engineer Portfolio" ? "Built a cross‑platform AI Travel Companion app with .NET MAUI, Azure, OpenAI, and Syncfusion integrations for seamless itinerary planning, dynamic scheduling, and Xcode‑based deployment." : project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, i) => (
+                  {(project.title === "Software Engineer Portfolio" ? [
+                    { name: ".NET MAUI" },
+                    { name: "SQL" },
+                    { name: "Azure" },
+                    { name: "OpenAI" },
+                    { name: "Syncfusion" },
+                    { name: "Xcode" }
+                  ] : project.technologies).map((tech, i) => (
                     <span 
                       key={i} 
                       className="text-xs font-medium bg-black/50 backdrop-blur-sm text-[#FFD700] px-2 py-1 rounded border border-[#FFD700]/30"

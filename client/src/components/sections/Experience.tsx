@@ -1,10 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { workExperience } from '@/data/portfolio-data';
 
 const Experience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.1 });
+  const [showModal, setShowModal] = useState(false);
   
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -128,16 +129,32 @@ const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <a 
-            href="#" 
+          <button
+            onClick={() => setShowModal(true)}
             className="inline-flex items-center px-6 py-3 bg-black text-[#FFD700] rounded-lg font-medium border border-[#FFD700]/30 transition-all hover:bg-[#FFD700]/10 font-['Cinzel']"
           >
-            Download Full Resume
+            Request Full Resume
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
-          </a>
+          </button>
         </motion.div>
+        {showModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-black/90 text-[#FFD700] p-6 rounded-xl max-w-md w-full shadow-[0_0_25px_rgba(255,215,0,0.3)] border border-[#FFD700]/20 relative">
+              <button onClick={() => setShowModal(false)} className="absolute top-2 right-2 text-[#FFD700]/60 hover:text-[#FFD700] text-2xl font-bold">&times;</button>
+              <h3 className="text-xl font-bold mb-4 font-['Cinzel']">Request My Resume</h3>
+              <form onSubmit={(e) => { e.preventDefault(); setShowModal(false); alert('Request sent!'); }}>
+                <input type="text" placeholder="Your Name" className="w-full border mb-3 px-3 py-2 rounded bg-black/70 text-[#FFD700] placeholder-[#FFD700]/50 border-[#FFD700]/30" required />
+                <input type="email" placeholder="Your Email" className="w-full border mb-3 px-3 py-2 rounded bg-black/70 text-[#FFD700] placeholder-[#FFD700]/50 border-[#FFD700]/30" required />
+                <textarea placeholder="Optional Message" className="w-full border mb-3 px-3 py-2 rounded bg-black/70 text-[#FFD700] placeholder-[#FFD700]/50 border-[#FFD700]/30"></textarea>
+                <button type="submit" className="w-full bg-[#FFD700] text-black py-2 rounded font-bold hover:bg-[#e6c200]">
+                  Send Request
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

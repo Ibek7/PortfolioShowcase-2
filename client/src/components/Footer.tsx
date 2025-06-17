@@ -78,15 +78,16 @@ const Footer = () => {
               }}
               className="relative text-2xl font-bold tracking-tight inline-block"
             >
-              <span className="gold-accent-glow font-['Cinzel'] text-3xl" data-text="R">R</span>
-              <span className="text-white font-['Cinzel']">oyal</span>
-              <span className="gold-accent-glow font-['Cinzel'] text-2xl" data-text="Dev">Dev</span>
+              <span className="gold-accent-glow font-['Cinzel'] text-3xl" data-text="R">P</span>
+              <span className="gold-accent-glow font-['Cinzel'] text-2xl" data-text="R">or</span>
+              <span className="text-white font-['Cinzel']">tfo</span>
+              <span className="gold-accent-glow font-['Cinzel'] text-2xl" data-text="Dev">lio.</span>
               <div className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"></div>
             </a>
             <p className="text-gray-400 mt-3 font-['Cormorant_Garamond'] text-lg max-w-md">
               Creating elegant solutions with royal precision and artistry. Transforming complex challenges into digital masterpieces.
             </p>
-            
+          
             <div className="flex space-x-5 mt-6">
               {socialLinks.map((link, i) => (
                 <motion.a 
@@ -146,7 +147,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   <a href="mailto:contact@royaldev.com" className="text-gray-400 hover:text-white transition-colors duration-300 font-['Cormorant_Garamond'] text-lg">
-                    contact@royaldev.com
+                    bekamdawit551@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center justify-center md:justify-start">
@@ -155,7 +156,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <span className="text-gray-400 font-['Cormorant_Garamond'] text-lg">
-                    San Francisco, USA
+                    Indiana, USA
                   </span>
                 </li>
               </ul>
@@ -171,9 +172,9 @@ const Footer = () => {
           variants={fadeInUpVariants}
         >
           <p className="text-gray-500 mb-4 md:mb-0 font-['Cormorant_Garamond']">
-            &copy; {currentYear} RoyalDev. All rights reserved.
+            &copy; {currentYear} Bekam Guta. All rights reserved
           </p>
-          
+         
           <div className="flex items-center">
             <p className="text-gray-500 flex items-center font-['Cormorant_Garamond']">
               Crafted with 

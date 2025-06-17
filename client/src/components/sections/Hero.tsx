@@ -39,18 +39,22 @@ const Hero = () => {
                 }}
               />
             </div>
-            
+         
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-['Cinzel'] font-bold leading-tight mb-8">
-              <span className="block">Bekam</span>
+              <span>
+               
+                <span className="text-white">Bekam</span>
+                
+              </span>
               <span className="block mt-1">
-                <span className="gold-accent-glow" data-text="Guta">Guta</span>
+                
+                <span className="text-white">Guta</span>
+                
               </span>
             </h1>
-            
-            <p className="text-lg md:text-xl text-white/80 font-['Cormorant_Garamond'] mb-10 max-w-xl leading-relaxed">
-              First-year Computer Science and Mathematics double major at DePauw University with 
-              a passion for AI research, web development, and tutoring. Maintaining a 3.97 GPA while exploring how
-              technology can address complex social challenges.
+           
+            <p className="text-lg md:text-xl text-white font-['Cormorant_Garamond'] mb-10 max-w-xl leading-relaxed">
+            Driven by a twin love of algorithms and altitude (skydiving), I craft AI-powered solutions that leverage machine learning to tackle real-world social challenges.
             </p>
             
             <div className="flex flex-wrap gap-5">
@@ -91,10 +95,10 @@ const Hero = () => {
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 gold-border shadow-[0_0_30px_rgba(255,215,0,0.3)] mx-auto relative z-10">
                 <div className="absolute inset-0 bg-gradient-to-tr from-black to-[#111111] opacity-10"></div>
                 <img 
-                  src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  src="/images/IMG_3707.png" 
                   alt="Bekam Guta" 
-                  className="w-full h-full object-cover"
-                />
+                  className="w-full h-full object-cover object-top transform scale-[1]"
+                  />
               </div>
               
               {/* Decorative elements */}
@@ -148,14 +152,14 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
-        
-        {/* Stats with royal styling */}
-        <div className="flex flex-wrap justify-center md:justify-start gap-x-16 gap-y-8 mt-24 text-white/80">
+                {/* Stats with royal styling */}
+        <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-x-12 md:gap-y-6 mt-12 text-white">
           {[
-            { number: "3.97", label: "Cumulative GPA" },
-            { number: "4.00", label: "Major GPA" },
-            { number: "82%", label: "AI Research Accuracy" },
-            { number: "2", label: "Academic Honor Awards" }
+            { number: "4.0", label: "Major GPA" },
+            { number: "1st", label: "Google DSC Hackathon Winner" },
+            { number: "150+", label: "Hours of Peer Tutoring" },
+            { number: "2+", label: "Skydive Jumps" },
+            { number: "3+", label: "Internship under 2 Years" }
           ].map((stat, index) => (
             <motion.div 
               key={index}
@@ -174,8 +178,8 @@ const Hero = () => {
                   repeat: Infinity,
                 }}
               />
-              <p className="text-4xl font-bold gold-accent font-['Cinzel']">{stat.number}</p>
-              <p className="text-sm mt-1 text-white/70 font-['Cormorant_Garamond']">{stat.label}</p>
+              <p className="text-lg md:text-3xl font-bold gold-accent font-['Cinzel']">{stat.number}</p>
+              <p className="text-xs md:text-sm mt-1 text-white/70 font-['Cormorant_Garamond']">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -200,8 +204,6 @@ const Hero = () => {
           onClick={() => smoothScroll('projects')}
           whileHover={{ scale: 1.1 }}
         >
-          <p className="gold-accent-glow mb-3 font-['Cinzel'] text-sm tracking-widest" data-text="EXPLORE">EXPLORE</p>
-          
           <div className="relative w-8 h-12 flex items-center justify-center">
             {/* Outer decorative frame */}
             <motion.div 
@@ -252,6 +254,7 @@ const Hero = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </motion.svg>
           </div>
+          <p className="gold-accent-glow mt-3 font-['Cinzel'] text-sm tracking-widest" data-text="EXPLORE">EXPLORE</p>
         </motion.div>
       </div>
     </section>
