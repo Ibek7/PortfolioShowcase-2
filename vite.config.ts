@@ -5,6 +5,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  base: '/PortfolioShowcase-2/',
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -27,7 +28,7 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(import.meta.dirname, "docs"),
     emptyOutDir: true,
   },
 });
