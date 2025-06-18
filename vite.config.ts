@@ -30,5 +30,6 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "docs"),
     emptyOutDir: true,
+    sourcemap: 'inline',
   },
 });
