@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { useSmoothScroll } from '@/hooks/use-smooth-scroll';
+// Import your profile photo
+// Make sure 'profilePhoto.png' is the correct filename and extension
+import profilePhoto from '@/assets/images/profilePhoto.png'; 
 
 const Hero = () => {
   const smoothScroll = useSmoothScroll({ 
@@ -95,7 +98,7 @@ const Hero = () => {
               <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 gold-border shadow-[0_0_30px_rgba(255,215,0,0.3)] mx-auto relative z-10">
                 <div className="absolute inset-0 bg-gradient-to-tr from-black to-[#111111] opacity-10"></div>
                 <img 
-                  src="/images/IMG_3707.png" 
+                  src={profilePhoto} 
                   alt="Bekam Guta" 
                   className="w-full h-full object-cover object-top transform scale-[1]"
                   />

@@ -1,8 +1,15 @@
+// Use valid JavaScript variable names for imports
+// Ensure these filenames EXACTLY match what's in your client/src/assets/images/ folder (including case and extension)
+import sorasakUnsplashImage from '@/assets/images/sorasakUnsplashImage.jpg';
+import vecteezySilhouetteImage from '@/assets/images/vecteezySilhouetteImage.jpg';
+// Assuming the Unsplash image for Human Trafficking is external, so no import needed for that one.
+
+
 export const projects = [
   {
     title: "Software Engineer Portfolio",
     description: "Ultra-luxurious personal portfolio built with React, TypeScript, and Framer Motion, featuring particle animations and a strict gold-black-white color scheme.",
-    image: "/images/sorasak-_UIN-pFfJ7c-unsplash-1568x1046.jpg",
+    image: sorasakUnsplashImage, // Use the imported variable
     category: "Frontend",
     technologies: [
       { name: "React", bgColor: "bg-blue-100", textColor: "text-blue-800" },
@@ -32,7 +39,7 @@ export const projects = [
   {
     title: "Vivavibe",
     description: "Built a Python Instagram Auto‑Poster with ChatGPT captions, DALL‑E 3 images, and Instagram Graph API publishing, storing 200+ posts in Firebase for a 21% efficiency boost",
-    image: "/images/vecteezy_silhouette-standing-victorious-on-top-of-peak_32946211.jpg",
+    image: vecteezySilhouetteImage, // Use the imported variable
     category: "Social Media Automation",
     technologies: [
       { name: "JavaScript", bgColor: "bg-blue-100", textColor: "text-blue-800" },
