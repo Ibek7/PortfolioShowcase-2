@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useSmoothScroll } from '@/hooks/use-smooth-scroll';
 // Import your profile photo
 // Make sure 'profilePhoto.png' is the correct filename and extension
-import profilePhoto from '@/assets/images/profilePhoto.png'; 
+import profilePhoto from '@/assets/images/IMG_3702 2.png'; 
 
 const Hero = () => {
   const smoothScroll = useSmoothScroll({ 
@@ -158,11 +158,12 @@ const Hero = () => {
                 {/* Stats with royal styling */}
         <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-x-12 md:gap-y-6 mt-12 text-white">
           {[
+            { number: "3+", label: "Internship under 2 Years" },
             { number: "4.0", label: "Major GPA" },
-            { number: "1st", label: "Google DSC Hackathon Winner" },
+            { number: "1st", label: "Google DPU-DSC Hackathon Winner" },
             { number: "150+", label: "Hours of Peer Tutoring" },
             { number: "2+", label: "Skydive Jumps" },
-            { number: "3+", label: "Internship under 2 Years" }
+          
           ].map((stat, index) => (
             <motion.div 
               key={index}

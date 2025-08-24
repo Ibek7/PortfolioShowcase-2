@@ -114,7 +114,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold gold-accent-glow font-['Cinzel'] mb-4" data-text="Get In Touch">Get In Touch</h2>
+          <h2 className="text-4xl font-bold gold-accent-glow font-['Cinzel'] mb-4">Get In Touch</h2>
           <p className="text-[#FFFFF7]/70 max-w-xl mx-auto font-['Cormorant_Garamond'] text-lg italic">
             Have a project in mind or want to discuss potential opportunities? Let's connect!
           </p>

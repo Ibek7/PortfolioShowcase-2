@@ -23,9 +23,9 @@ const Home = () => {
       
       <main>
         <Hero />
+        <Experience />
         <Projects />
         <Skills />
-        <Experience />
         <Blog />
         <Contact />
       </main>

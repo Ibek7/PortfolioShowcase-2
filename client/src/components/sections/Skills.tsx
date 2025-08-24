@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { frontendSkills, backendSkills, devopsSkills, dataVisualizationSkills } from '@/data/portfolio-data';
 
+
 interface SkillBarProps {
   name: string;
-  percentage: number;
   delay?: number;
 }
 
-const SkillBar = ({ name, percentage, delay = 0 }: SkillBarProps) => {
+const SkillBar = ({ name, delay = 0 }: SkillBarProps) => {
   const skillRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(skillRef, { once: true, margin: "-100px 0px" });
  
@@ -16,13 +16,12 @@ const SkillBar = ({ name, percentage, delay = 0 }: SkillBarProps) => {
     <div ref={skillRef}>
       <div className="flex justify-between mb-2">
         <span className="font-medium text-white font-['Cinzel']">{name}</span>
-        <span className="text-[#FFFFF7] font-['Cormorant_Garamond'] text-lg">{percentage}%</span>
       </div>
       <div className="skill-bar h-3 bg-black/50 rounded-full border border-[#FFD700]/20">
         <motion.div 
           className="skill-progress h-full rounded-full"
           initial={{ width: "0%" }}
-          animate={isInView ? { width: `${percentage}%` } : { width: "0%" }}
+          animate={isInView ? { width: `100%` } : { width: "0%" }}
           transition={{ duration: 1, delay: delay, ease: "easeOut" }}
         />
       </div>
@@ -40,7 +39,6 @@ const SkillCategory = ({ title, skills, delayOffset = 0 }: { title: string, skil
           <SkillBar 
             key={skill.name}
             name={skill.name}
-            percentage={skill.percentage}
             delay={delayOffset + (index * 0.1)}
           />
         ))}

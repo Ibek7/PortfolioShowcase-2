@@ -81,10 +81,10 @@ export const devopsSkills = [
 // Experience section data
 export const workExperience = [
   {
-    title: "AI/Machine Learning Intern (Incoming)",
+    title: "AI/Machine Learning Intern",
     company: "Mayo Clinic — Rochester, MN",
     period: "Jul 2025 - Aug 2025",
-    description: "Anticipated contributions include engineering features from orthopedic imaging and EHR data; developing ML models to predict surgical outcomes; validating models and delivering integrated pipeline reports.",
+    description: "Engineered features from orthopedic imaging and EHR data; built ML models to forecast surgical outcomes; validated performance and delivered integrated pipeline reports for clinical workflow.",
     technologies: [
       { name: "Python" },
       { name: "scikit-learn" },
